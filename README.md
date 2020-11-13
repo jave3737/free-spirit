@@ -1,10 +1,8 @@
-# free-spirit
-
-## Requirements
+# Requirements
 * ubuntu
 * docker
 
-## How to build
+# How to build
 * add the following alias to the bashrc
 
 ```bash
@@ -14,12 +12,11 @@ alias buildzephyr="docker build --tag zephyr:1.0 ."
 
 * run `buildzephyr` to build the docker image
 * run `runzephyr` to enter the container
-
-### build blinky project
+ 
+# Build blinky project
 * run the following 
 
 ```bash
 cd ~/zephyrproject/zephyr
 west build -p auto -b nrf5340pdk_nrf5340_cpuapp samples/basic/blinky
-west build -p auto -b nrf5340pdk_nrf5340_cpunet samples/basic/blinky
 ```

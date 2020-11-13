@@ -40,6 +40,14 @@ RUN cd ~ && \
     ./zephyr-sdk-0.11.4-setup.run -- -d ~/zephyr-sdk-0.11.4
 
 ################################################################################
+# INSTALL FLASH TOOL
+################################################################################
+RUN wget https://www.nordicsemi.com/-/media/Software-and-other-downloads/Desktop-software/nRF-command-line-tools/sw/Versions-10-x-x/10-11-1/nRFCommandLineTools10111Linuxamd64tar.gz -O ~/nrf_flash_tool.tar.gz && \
+   mkdir ~/nrf_flash_tool && \
+   tar -xzvf ~/nrf_flash_tool.tar.gz -C ~/nrf_flash_tool && \
+   dpkg -i --force-overwrite ~/nrf_flash_tool/*.deb
+
+################################################################################
 # UPDATE USER SETTINGS
 ################################################################################
 # make a shell script that completely copies over the vim environment into the docker one
