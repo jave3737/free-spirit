@@ -6,7 +6,7 @@
 * add the following alias to the bashrc
 
 ```bash
-alias runzephyr="docker run --rm -it --name=test zephyr:1.0"
+alias runzephyr="docker run -v $(pwd):/root/application --rm -it --name=test zephyr:1.0"
 alias buildzephyr="docker build --tag zephyr:1.0 ."
 ```
 
