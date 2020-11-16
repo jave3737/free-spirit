@@ -5,6 +5,7 @@ MAINTAINER jave3737@pm.me
 ################################################################################
 ENV DEBIAN_FRONTEND noninteractive
 ENV PATH="/root/.local/bin:${PATH}"
+ENV ZEPHYR_BASE="/root/zephyrproject/zephyr"
 RUN apt-get update && \
     apt-get -y install --no-install-recommends apt-utils dialog git cmake ninja-build gperf \
     ccache dfu-util device-tree-compiler wget \
@@ -52,6 +53,5 @@ RUN wget https://www.nordicsemi.com/-/media/Software-and-other-downloads/Desktop
 ################################################################################
 # make a shell script that completely copies over the vim environment into the docker one
 RUN echo "set bell-style none" >> /etc/inputrc
-RUN mkdir ~/application
 
 

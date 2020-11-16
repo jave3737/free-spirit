@@ -6,7 +6,7 @@
 * add the following alias to the bashrc
 
 ```bash
-alias runzephyr="docker run -v $(pwd):/root/application --rm -it --name=test zephyr:1.0"
+alias runzephyr="docker run -v $(pwd):/root/app --rm -it zephyr:1.0"
 alias buildzephyr="docker build --tag zephyr:1.0 ."
 ```
 
@@ -17,6 +17,6 @@ alias buildzephyr="docker build --tag zephyr:1.0 ."
 * run the following 
 
 ```bash
-cd ~/zephyrproject/zephyr
-west build -p auto -b nrf5340pdk_nrf5340_cpuapp samples/basic/blinky
+cd ~/app
+west build -b reel_board
 ```
