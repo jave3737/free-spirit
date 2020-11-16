@@ -53,5 +53,6 @@ RUN wget https://www.nordicsemi.com/-/media/Software-and-other-downloads/Desktop
 ################################################################################
 # make a shell script that completely copies over the vim environment into the docker one
 RUN echo "set bell-style none" >> /etc/inputrc
+RUN echo "cd ~/app" >> ~/.bashrc
 
 
