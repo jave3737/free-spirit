@@ -18,7 +18,7 @@ buildzephyr
 * Enter the container
 
 ```bash
-* run `runzephyr`
+runzephyr
 ```
  
 * Build the application
