@@ -1,22 +1,28 @@
-# Requirements
-* ubuntu
-* docker
+# Getting Started
+* Clone the project to a directory `~/projects/`
 
-# How to build
-* add the following alias to the bashrc
+* Add the following aliases to the .profile or .bashrc
 
 ```bash
-alias runzephyr="docker run -v $(pwd):/root/app --rm -it zephyr:1.0"
 alias buildzephyr="docker build --tag zephyr:1.0 ."
+alias runzephyr="docker run -it --mount src=~/projects/free-spirit,target=/root/app,type=bind --rm zephyr:1.0"
 ```
 
-* run `buildzephyr` to build the docker image
-* run `runzephyr` to enter the container
- 
-# Build blinky project
-* run the following 
+* Build the docker image
 
 ```bash
-cd ~/app
+cd ~/projects/free-spirit/docker_files/
+buildzephyr
+```
+
+* Enter the container
+
+```bash
+* run `runzephyr`
+```
+ 
+* Build the application
+
+```bash
 west build -b reel_board
 ```
